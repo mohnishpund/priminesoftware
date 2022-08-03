@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="card text-center text-danger bg-dark">
+  <div class="card-header">
+    <h1>Delete Booking</h1>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+        <div class="container">
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr class="table-dark">
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone_number</th>
+                    <th scope="col">khasara</th>
+                    <th scope="col">Advisory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr class="table-secondary">
+                    <td>{{ Booking.id }}</td>
+                    <td>{{ Booking.Name }}</td>
+                    <td>{{ Booking.Address }}</td>
+                    <td>{{ Booking.Phone_number }}</td>
+                    <td>{{ Booking.Khasara }}</td>
+                    <td>{{ Booking.Advisoryname }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </h5>
+    <p class="card-text">
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                <br/><br/>     
+        </div>
+    </p>
+     <button class="btn btn-primary">Delete {{ Booking.name }}</button>
+    </form> 
+  </div>
+  <div class="card-footer text-muted">
+   <strong>Are you sure... ? Do you want too delete {{ Booking.name }} Booking..?</strong>
+  </div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+{% endblock %}

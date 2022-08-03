@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<br/>
+<br/>
+    <div class="card text-black bg-info mb-3" style="max-width: 35rem">
+        <div class="card-body">
+        <h5 class="card-title">ADD BOOKING</h5>
+        <p class="card-text">
+            <div class="container">
+                <div class="mb-3">
+                <div class="form-group">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </p>
+        </div>
+    </div>
+    </br>
+    </br>
+
+
+
+
+{% endblock %}
